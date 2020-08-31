@@ -20,53 +20,53 @@ public interface CustomerRepo extends JpaRepository<Customer, Integer> {
 	public List<Customer> findByCName(String name);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT>?
-	public List<Customer> findByBillAmtGreaterThan(double amount);
+	public List<Customer> findBybillAmtGreaterThan(double amount);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT<?
-	//public List<Customer> findByBillAmtLessThan(double amount);
+	public List<Customer> findBybillAmtLessThan(double amount);
 
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE 'Ram%'
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE '____'
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE '____%'
-	//public List<Customer> findByCNameLike(String initChars);
+	public List<Customer> findByCNameLike(String initChars);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE 'R%'
-	//public List<Customer> findByCNameStartingWith(String nameChars);
+	public List<Customer> findByCNameStartingWith(String nameChars);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE '%h'
-	//public List<Customer> findByCNameEndingWith(String nameChars);
+	public List<Customer> findByCNameEndingWith(String nameChars);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME LIKE '%m%'
-	//public List<Customer> findByCNameContaining(String nameChars);
+	public List<Customer> findByCNameContaining(String nameChars);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS IS NULL
-	//public Iterable<Customer> findByCAddrsIsNull();
+	public Iterable<Customer> findByCAddrsIsNull();
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS IS NOT NULL
-	//public Iterable<Customer> findByCAddrsIsNotNull();	
-	//public Iterable<Customer> findByCAddrsNotNull();	
+	public Iterable<Customer> findByCAddrsIsNotNull();	
+	public Iterable<Customer> findByCAddrsNotNull();	
 	
 	//--------------------------Working with more than one property and condition------------------------------
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT>40000 AND BILLAMT<70000
-	//public Iterable<Customer> findByBillAmtGreaterThanEqualAndBillAmtLessThanEqual(double start, double end);
+	//NotWorking-->//public Iterable<Customer> findBybillAmtGreaterThanEqualAndbillAmtLessThanEqual(double start, double end);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT BETWEEN (40000,70000)
-	//public Iterable<Customer> findByBillAmtBetween(double start, double end);
+	public Iterable<Customer> findBybillAmtBetween(double start, double end);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME='Raja' OR CADDRS='Hyd'
-	//public Iterable<Customer> findByCNameEqualsOrCAddrsEquals(String name,String addrs);
-	//public Iterable<Customer> findByCNameOrCAddrs(String name,String addrs);
+	public Iterable<Customer> findByCNameEqualsOrCAddrsEquals(String name,String addrs);
+	public Iterable<Customer> findByCNameOrCAddrs(String name,String addrs);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT BETWEEN(40000,80000) ORDER BY DESC
 	//public Iterable<Customer> findByBillAmtBetweenOrderByCNameDesc(double min,double max);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS <>'Hyd'
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS !='Hyd'
-	//public Iterable<Customer> findByCAddrsNot(String addrs);
+	public Iterable<Customer> findByCAddrsNot(String addrs);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS IN ('Hyd','Viizag','Delhi')
-	//public Iterable<Customer> findByCAddrsIn(Collection<String> cities);
+	public Iterable<Customer> findByCAddrsIn(Collection<String> cities);
 	
 	
 	

@@ -35,6 +35,6 @@ public class Customer implements Serializable {
 	
 	@Column(name = "BILLAMT")
 	@Type(type = "double")
-	private Double BillAmt;
+	private Double billAmt;
 
 }
