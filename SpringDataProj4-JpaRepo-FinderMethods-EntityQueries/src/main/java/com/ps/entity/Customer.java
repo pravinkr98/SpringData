@@ -27,13 +27,14 @@ public class Customer implements Serializable {
 	
 	@Column(name="CNAME",length = 25)
 	@Type(type = "string")
-	private String cName;
+	private String CName;
 	
 	@Column(name = "CADDRS",length = 30)
 	@Type(type = "string")
-	private String cAddrs;
+	private String CAddrs;
 	
 	@Column(name = "BILLAMT")
 	@Type(type = "double")
-	private Double billAmt;
+	private Double BillAmt;
+
 }
