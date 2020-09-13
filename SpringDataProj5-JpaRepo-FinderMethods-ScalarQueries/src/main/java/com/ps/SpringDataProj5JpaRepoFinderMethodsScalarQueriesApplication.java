@@ -41,15 +41,15 @@ public class SpringDataProj5JpaRepoFinderMethodsScalarQueriesApplication {
 		}	*/	
 		
 		System.out.println("--------------------------------------------------------------------");
-		/*List<ResultsView2> listView2=custRepo.findByCAddrs("Hyd", ResultsView2.class);
+		List<ResultsView2> listView2=custRepo.findByCAddrs("Hyd", ResultsView2.class);
 		for(ResultsView2 v: listView2) {
 			System.out.println(v.getCName()+"    "+v.getBillAmt());
-		}	*/
+		}	
 		
-		List<ResultsView1> listView=custRepo.findByCAddrs("Delhi", ResultsView1.class);
+		/*List<ResultsView1> listView=custRepo.findByCAddrs("Delhi", ResultsView1.class);
 		for(ResultsView1 v:listView) {
 			System.out.println(v.getcNo()+"    "+v.getCName());
-		}
+		}*/
 		
 		((ConfigurableApplicationContext) ctx).close();
 	}
