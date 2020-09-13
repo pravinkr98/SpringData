@@ -40,7 +40,8 @@ public class SpringDataProj4JpaRepoFinderMethodsEntityQueriesApplication {
 		//custRepo.findByCNameOrCAddrs("Raja", "Hyd").forEach(System.out::println);
 		//custRepo.findByBillAmtBetweenOrderByCNameDesc(40000, 80000).forEach(System.out::println);
 		//custRepo.findByCAddrsNot("Hyd").forEach(System.out::println);
-		custRepo.findByCAddrsIn(List.of("Hyd","Vizag","Delhi")).forEach(System.out::println);
+		//custRepo.findByCAddrsIn(List.of("Hyd","Vizag","Delhi")).forEach(System.out::println);
+		System.out.println(custRepo.findByCName("Raja"));
 		
 	}
 

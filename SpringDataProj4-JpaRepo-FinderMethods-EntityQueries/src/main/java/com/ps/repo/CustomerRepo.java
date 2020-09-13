@@ -17,7 +17,7 @@ public interface CustomerRepo extends JpaRepository<Customer, Integer> {
 	public List<Customer> findByCAddrs(String addrs);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME=?
-	public List<Customer> findByCName(String name);
+	//public List<Customer> findByCName(String name);
 	
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE BILLAMT>?
 	public List<Customer> findBybillAmtGreaterThan(double amount);
@@ -68,6 +68,7 @@ public interface CustomerRepo extends JpaRepository<Customer, Integer> {
 	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CADDRS IN ('Hyd','Viizag','Delhi')
 	public Iterable<Customer> findByCAddrsIn(Collection<String> cities);
 	
-	
+	//SELECT CNO,CNAME,CADDRS,BILLAMT FROM CUSTOMER WHERE CNAME='Raja' 	//assume CNAME having UK Constraints
+	public Customer findByCName(String name);	
 	
 }
